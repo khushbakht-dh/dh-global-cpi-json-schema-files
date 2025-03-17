@@ -52,7 +52,6 @@
             "type": "object"
         },
         "orderDate": {
-            "format": "date",
             "type": "string"
         },
         "orderId": {
