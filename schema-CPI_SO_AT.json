@@ -103,8 +103,5 @@
             "type": "string"
         }
     },
-    "required": [
-        "currency"
-    ],
     "type": "object"
 }
