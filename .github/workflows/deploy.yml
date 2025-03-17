@@ -19,7 +19,7 @@ jobs:
         id: set-env
         run: |
           if [[ "${{ github.ref }}" == refs/heads/schema/* ]]; then
-            echo "BUCKET_NAME=my-test-bucket" >> $GITHUB_ENV
+            echo "BUCKET_NAME=dh-global-cpi-json-schema-files" >> $GITHUB_ENV
             echo "AWS_ACCESS_KEY=${{ secrets.AWS_TEST_ACCESS_KEY_ID }}" >> $GITHUB_ENV
             echo "AWS_SECRET_KEY=${{ secrets.AWS_TEST_SECRET_ACCESS_KEY }}" >> $GITHUB_ENV
             echo "AWS_REGION=eu-central-1" >> $GITHUB_ENV 
