@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-08/schema#",
-  "$comment": "Draft 3", 
+  "$comment": "Draft 4", 
    "properties": {
         "Payments": {
             "items": {
