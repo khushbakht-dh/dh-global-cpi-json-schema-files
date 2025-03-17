@@ -1,0 +1,131 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "properties": {
+        "commissionBaseModel": {
+            "type": "string"
+        },
+        "currency": {
+            "type": "string"
+        },
+        "deliveryServiceProvider": {
+            "type": "string"
+        },
+        "domain": {
+            "type": "string"
+        },
+        "entity": {
+            "type": "string"
+        },
+        "hash": {
+            "type": "string"
+        },
+        "isCorporate": {
+            "type": "boolean"
+        },
+        "isProSubscription": {
+            "type": "boolean"
+        },
+        "items": {
+            "properties": {
+                "condition": {
+                    "items": {
+                        "properties": {
+                            "conditionType": {
+                                "type": "string"
+                            },
+                            "conditionValue": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "conditionType",
+                            "conditionValue"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "condition"
+            ],
+            "type": "object"
+        },
+        "orderDate": {
+            "format": "date",
+            "type": "string"
+        },
+        "orderId": {
+            "type": "string"
+        },
+        "orderTime": {
+            "type": "string"
+        },
+        "paymentData": {
+            "items": {
+                "properties": {
+                    "amount": {
+                        "type": "string"
+                    },
+                    "paymentProvider": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "amount",
+                    "paymentProvider"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "paymentMethod": {
+            "type": "string"
+        },
+        "paymentProvider": {
+            "type": "string"
+        },
+        "prepaymentModel": {
+            "type": "string"
+        },
+        "restaurantId": {
+            "type": "string"
+        },
+        "salesForceGridId": {
+            "type": "string"
+        },
+        "status": {
+            "type": "string"
+        },
+        "timestamp": {
+            "type": "string"
+        },
+        "vertical": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "commissionBaseModel",
+        "currency",
+        "deliveryServiceProvider",
+        "domain",
+        "entity",
+        "hash",
+        "isCorporate",
+        "isProSubscription",
+        "items",
+        "orderDate",
+        "orderId",
+        "orderTime",
+        "paymentData",
+        "paymentMethod",
+        "paymentProvider",
+        "prepaymentModel",
+        "restaurantId",
+        "salesForceGridId",
+        "status",
+        "timestamp",
+        "vertical"
+    ],
+    "type": "object"
+}
