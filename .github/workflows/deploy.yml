@@ -22,12 +22,12 @@ jobs:
             echo "BUCKET_NAME=my-test-bucket" >> $GITHUB_ENV
             echo "AWS_ACCESS_KEY=${{ secrets.AWS_TEST_ACCESS_KEY_ID }}" >> $GITHUB_ENV
             echo "AWS_SECRET_KEY=${{ secrets.AWS_TEST_SECRET_ACCESS_KEY }}" >> $GITHUB_ENV
-            echo "AWS_REGION=us-east-1" >> $GITHUB_ENV  # Change as needed
+            echo "AWS_REGION=eu-central-1" >> $GITHUB_ENV 
           elif [[ "${{ github.ref }}" == refs/tags/prod-* ]]; then
             echo "BUCKET_NAME=my-prod-bucket" >> $GITHUB_ENV
             echo "AWS_ACCESS_KEY=${{ secrets.AWS_PROD_ACCESS_KEY_ID }}" >> $GITHUB_ENV
             echo "AWS_SECRET_KEY=${{ secrets.AWS_PROD_SECRET_ACCESS_KEY }}" >> $GITHUB_ENV
-            echo "AWS_REGION=us-west-2" >> $GITHUB_ENV  # Change as needed
+            echo "AWS_REGION=eu-central-1" >> $GITHUB_ENV
           else
             echo "This branch is not set up for deployment."
             exit 1
