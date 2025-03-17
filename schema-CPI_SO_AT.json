@@ -46,9 +46,7 @@
                     "type": "array"
                 }
             },
-            "required": [
-                "condition"
-            ],
+            "required": [],
             "type": "object"
         },
         "orderDate": {
