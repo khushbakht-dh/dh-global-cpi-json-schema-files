@@ -104,27 +104,7 @@
         }
     },
     "required": [
-        "commissionBaseModel",
-        "currency",
-        "deliveryServiceProvider",
-        "domain",
-        "entity",
-        "hash",
-        "isCorporate",
-        "isProSubscription",
-        "items",
-        "orderDate",
-        "orderId",
-        "orderTime",
-        "paymentData",
-        "paymentMethod",
-        "paymentProvider",
-        "prepaymentModel",
-        "restaurantId",
-        "salesForceGridId",
-        "status",
-        "timestamp",
-        "vertical"
+        "currency"
     ],
     "type": "object"
 }
