@@ -16,7 +16,7 @@ jobs:
     - name: Extract Filename from Branch
       run: |
         BRANCH_NAME="${{ github.ref_name }}"  # Get the full branch name
-        FILE_NAME=$(echo "$BRANCH_NAME" | sed -E 's|CR-[0-9]+/||')  # Remove 'CR-*/'
+        FILE_NAME=$(echo "$BRANCH_NAME" | sed -E 's|CR-[0-9]+/||')".json"  # Remove 'CR-*/' and add ".json"
         echo "Uploading file: $FILE_NAME"
         echo "FILE_NAME=$FILE_NAME" >> $GITHUB_ENV  # Store for later use
 
