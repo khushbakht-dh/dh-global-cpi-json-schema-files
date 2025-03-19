@@ -29,4 +29,4 @@ jobs:
 
     - name: Upload only the changed file
       run: |
-        aws s3 cp "$FILE_NAME" "s3://dh-global-cpi-json-schema-files/$FILE_NAME"
+        aws s3 cp "$FILE_NAME" "s3://dh-global-cpi-json-schema-files-qas/$FILE_NAME"
