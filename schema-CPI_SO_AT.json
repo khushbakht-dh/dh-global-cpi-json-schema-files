@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$comment":"Schema file- comment 13",
+    "$comment":"Schema file- comment 100",
     "properties": {
         "commissionBaseModel": {
             "type": "string"
