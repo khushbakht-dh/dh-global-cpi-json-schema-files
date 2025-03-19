@@ -3,7 +3,7 @@ name: Deploy to S3
 on:
   push:
     branches:
-      - schema/*  
+      - CR-*/schema-*  
 
 jobs:
   deploy:
@@ -13,6 +13,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Extract Filename from Branch
+      run: |
+        BRANCH_NAME="${{ github.ref_name }}"  # Get the full branch name
+        FILE_NAME=$(echo "$BRANCH_NAME" | sed -E 's|CR-[0-9]+/||')  # Remove 'CR-*/'
+        echo "Uploading file: $FILE_NAME"
+        echo "FILE_NAME=$FILE_NAME" >> $GITHUB_ENV  # Store for later use
+
     - name: Set up AWS CLI
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -20,7 +27,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_TEST_SECRET_ACCESS_KEY }}
         aws-region: eu-central-1 
 
-    - name: Sync files to S3
+    - name: Upload only the changed file
       run: |
-        aws s3 sync . s3://dh-global-cpi-json-schema-files  --exclude "*" --include "schema-*"  
-
+        aws s3 cp "$FILE_NAME" "s3://dh-global-cpi-json-schema-files/$FILE_NAME"
